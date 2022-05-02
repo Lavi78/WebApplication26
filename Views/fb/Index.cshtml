@@ -1,0 +1,58 @@
+﻿@model  IEnumerable < WebApplication26.Models.employee>
+@*@{
+        ViewBag.Title = "Index";
+
+    <h1>Today:@DateTime.Now</h1>
+
+    <h2>Index</h2>
+    <p>
+        @{
+            int x = 10;
+            int y = 50;
+            int z = x * y;
+            @z
+        }
+    </p>*@
+
+
+@*<h1>message:@ViewBag.msg</h1>
+    <ol>
+        @foreach (var emp in ViewBag.employees)
+        {
+            <li>@emp</li>
+
+        }
+    </ol>*@
+
+@*<h1> message:@viewdata["msg"]</h1>
+
+    @foreach (var data in (list<string>)viewdata["emp"])
+    {
+        <li>@data</li>
+    }
+    @model WebAapplication26.Model.employee
+    @{
+        ViewBag.Title = "Index";
+    }*@
+
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>employee page</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    @foreach (var emp in Model)
+    {
+<tr>
+    <td>@emp.Id</td>
+    <td>@emp.name</td>
+    <td>@emp.salary</td>
+</tr>
+    }
+
+</table>
